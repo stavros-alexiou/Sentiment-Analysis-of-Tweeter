@@ -31,7 +31,7 @@ y = le.fit_transform(data['sentiment'].values)
 corpus = data['cleaned_tweet'].values
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(corpus)
-dump(vectorizer, 'tfidf.pkl') # Saving the Vectorizer for later use of the saving model
+dump(vectorizer, 'testing/tfidf.pkl') # Saving the Vectorizer for later use of the saving model
 # print(X)
 print(corpus)
 print(y[:10])
