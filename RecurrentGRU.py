@@ -36,7 +36,7 @@ X = tokenizer.texts_to_sequences(data['cleaned_tweet'].values)
 X = pad_sequences(X)
 
 # saving tokenizer for later use
-with open('tokenizer.pickle', 'wb') as handle:
+with open('testing/tokenizer.pickle', 'wb') as handle:
     pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, shuffle=True)
@@ -61,7 +61,7 @@ batch_size = 256
 # hist = model.fit(X_train, y_train, batch_size=128, epochs=5, validation_data=(X_test, y_test))
 #
 # # save model and architecture to single file
-# model.save("NeuralNetworks/GRU.h5")
+# model.save("testing/NeuralNetworks/GRU.h5")
 # print("Saved GRU model to disk")
 #
 # loss, accuracy = model.evaluate(X_train, y_train)
@@ -92,7 +92,7 @@ hist = model.fit(X_train, y_train, batch_size=128, epochs=5, validation_data=(X_
 
 
 # save model and architecture to single file
-model.save("NeuralNetworks/RNNGRU.h5")
+model.save("testing/NeuralNetworks/RNNGRU.h5")
 print("Saved RecurciveGRU model to disk")
 
 # # load and evaluate a saved model
