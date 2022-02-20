@@ -48,7 +48,7 @@ print("Accuracy score of test")
 print(accuracy_score(y_test, y_predict_nb))
 
 # Save the model as a pickle in a file
-joblib.dump(NB_model, 'ML/NB_modelSent.pkl')
+joblib.dump(NB_model, 'testing/ML/NB_modelSent.pkl')
 
 # Training Logistics Regression model
 LogReg_model = LogisticRegression(solver='liblinear', C=100)
@@ -64,7 +64,7 @@ print("Accuracy score of trained")
 print(accuracy_score(y_train, y_predict_lr_train))
 
 # Save the model as a pickle in a file
-joblib.dump(LogReg_model, 'ML/LR_modelSent.pkl')
+joblib.dump(LogReg_model, 'testing/ML/LR_modelSent.pkl')
 
 # Load the model from the file
 # LR_model_from_joblib = joblib.load('ML/LR_modelSent.pkl')
@@ -87,4 +87,4 @@ accuracy = accuracy_score(y_test, predictions)
 print("Accuracy: %.4f%%" % (accuracy * 100.0))
 
 # Save the model as a pickle in a file
-joblib.dump(XGB_model, 'ML/XGB_modelSent.pkl')
+joblib.dump(XGB_model, 'testing/ML/XGB_modelSent.pkl')
