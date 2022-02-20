@@ -33,7 +33,7 @@ print(y)
 corpus = data['cleaned_tweet'].values
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(corpus)
-dump(vectorizer, 'tfidf.pkl')
+dump(vectorizer, 'testing/tfidf.pkl')
 # print(X)
 # print(corpus)
 # print(y)
@@ -49,7 +49,7 @@ print("Naive Bayes model ")
 print(accuracy_score(y_test, y_predict_nb))
 
 # Save the model as a pickle in a file
-joblib.dump(NB_model, 'NB_model.pkl')
+joblib.dump(NB_model, 'testing/NB_model.pkl')
 
 # Training Logistics Regression model
 LogReg_model = LogisticRegression(solver='liblinear', C=100)
@@ -66,10 +66,10 @@ print(accuracy_score(y_train, y_predict_lr_train))
 # 0.7835    0.7833625   0.780075
 
 # Save the model as a pickle in a file
-joblib.dump(LogReg_model, 'LogReg_model.pkl')
+joblib.dump(LogReg_model, 'testing/LogReg_model.pkl')
 
 # Load the model from the file
-LR_model_from_joblib = joblib.load('LR_model.pkl')
+LR_model_from_joblib = joblib.load('testing/LR_model.pkl')
 print(LR_model_from_joblib)
 
 #Create a svm Classifier
@@ -99,4 +99,4 @@ print("Accuracy: %.4f%%" % (accuracy * 100.0))
 
 
 # Save the model as a pickle in a file
-joblib.dump(XGB_model, 'XGB_model.pkl')
+joblib.dump(XGB_model, 'testing/XGB_model.pkl')
