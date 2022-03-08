@@ -17,4 +17,4 @@ Machine Learning Algorithms:
 1. Naive Bayes Classifier.
 2. Decision Tree Classifier.
 3. XGBoost Classifier.
-4. 
+
